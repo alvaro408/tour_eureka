@@ -15,3 +15,8 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    # 自保机制
+    enable-self-preservation: true
+    #每隔多久出发一次服务剔除
+    eviction-interval-timer-in-ms: 10000
